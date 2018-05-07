@@ -14,6 +14,7 @@ const passport 		= require("passport");
 const LocalStrategy = require("passport-local").Strategy;
 const flash			= require("connect-flash");
 const User			= require("./models/user");
+const s3			= require("s3");
 
 
 mongoose.Promise = Promise;
@@ -34,6 +35,20 @@ app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
+
+var s3client = s3.createClient({
+	maxAsyncS3: 20,     // this is the default
+	s3RetryCount: 3,    // this is the default
+	s3RetryDelay: 1000, // this is the default
+	multipartUploadThreshold: 20971520, // this is the default (20 MB)
+	multipartUploadSize: 15728640, // this is the default (15 MB)
+	s3Options: {
+		accessKeyId: "your s3 key",
+		secretAccessKey: "your s3 secret",
+		// any other options are passed to new AWS.S3()
+		// See: http://docs.aws.amazon.com/AWSJavaScriptSDK/latest/AWS/Config.html#constructor-property
+	},
+});
 
 // Express View engine setup
 
@@ -63,8 +78,7 @@ app.locals.title = 'An Unnamed CRUD App';
 passport.serializeUser((user, cb) => {
 	cb(null, user._id);
 });
-  
-  //cb = callback
+//cb = callback
 passport.deserializeUser((id, cb) => {
 	User.findById(id, (err, user) => {
 	  if (err) { return cb(err); }

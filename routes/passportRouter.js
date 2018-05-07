@@ -37,7 +37,10 @@ router.post("/signup", (req, res, next) => {
 
 		const newUser = new User( {
 			username: username,
-			password: hashPass
+			password: hashPass,
+			fullname: fullname,
+			bio: bio,
+			// avatar: String
 		});
 
 		newUser.save((err) => {
@@ -60,6 +63,24 @@ router.post("/login", passport.authenticate("local", {
 	failureFlash: true,
 	passReqToCallback: true
 }));
+
+router.get("/updateprofile/:id", ensureLogin.ensureLoggedIn(), (req, res) => {
+	res.render("passport/updateprofile", {user: req.user});
+})
+
+router.post("/updateprofile/:id", (req, res, next) => {
+	const username = req.body.username;
+	const fullname = req.body.fullname;
+	const bio	   = req.body.bio;
+
+	User.findByIdAndUpdate(req.params.id, {
+		username: username,
+		fullname: fullname,
+		bio: bio
+	})
+  	.then(res.redirect("/private"))
+  	.catch();
+})
 
 router.get("/logout", (req, res) => {
 	req.logout();
