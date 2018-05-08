@@ -1,0 +1,17 @@
+<div class="card" style="width: 18rem;">
+	<img class="card-img-top" src="/images/Ilia.png" alt="Card image cap">
+	<div class="card-body">
+		<h5 class="card-title">{{user.username}}</h5>
+		<h6 class="card-title">{{user.fullname}}</h6>
+		<p class="card-text">{{user.bio}}</p>
+	</div>
+	<ul class="list-group list-group-flush">
+		<li class="list-group-item"><em>This many photos</em></li>
+		<li class="list-group-item"><em>This many followers</em></li>
+		<li class="list-group-item"><em>Following this many</em></li>
+	</ul>
+	<div class="card-body">
+		<button type="button" class="btn btn-primary">Post</button>
+		<a href="/updateprofile/{{user._id}}"><button type="button" class="btn btn-secondary">Edit</button></a>
+	</div>
+</div>

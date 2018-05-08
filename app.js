@@ -36,6 +36,8 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
+hbs.registerPartials("/views/partials");
+
 var s3client = s3.createClient({
 	maxAsyncS3: 20,     // this is the default
 	s3RetryCount: 3,    // this is the default
@@ -67,6 +69,7 @@ app.use(require('node-sass-middleware')({
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
+hbs.registerPartials(__dirname + '/views/partials');
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 app.use(passport.initialize());
 app.use(passport.session());

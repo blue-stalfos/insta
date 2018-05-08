@@ -1,0 +1,29 @@
+{{!-- <div>Private page</div> --}}
+
+{{#if user}}
+	<div>
+		{{!-- User Avatar --}}
+		
+		<h1>{{user.username}}</h1>
+		<h3>{{user.fullname}}</h3>
+		<span>{{user.bio}}</span>
+		<a href="/updateprofile/{{user._id}}">Edit Profile</a>
+		<br><br><br>
+
+		All of the user's photos.<br>
+		Comment on each photo.
+
+		<hr>
+
+		{{!-- <img src="http://media.giphy.com/media/UsK5GqD3e0huU/giphy.gif" alt="You rock."> --}}
+
+		<br><br>
+		<a href="/">Index</a>
+
+		{{!-- User Posts --}}
+	</div>
+
+	<span>
+		<a href="/logout">Logout</a>
+	</span>
+{{/if}}
