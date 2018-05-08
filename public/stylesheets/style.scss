@@ -1,8 +1,11 @@
 body {
   padding: 10px 50px 10px 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  // background-color: darkgray;
+  background-image: url("../images/penguin.jpg");
+  background-size: cover;
 }
 
 a {
-  color: #00B7FF;
+  color: rgb(25, 56, 68);
 }
