@@ -20,6 +20,8 @@ router.get("/signup", (req, res, next) => {
 router.post("/signup", (req, res, next) => {
 	const username = req.body.username;
 	const password = req.body.password;
+	const fullname = req.body.fullname;
+	const bio 	   = req.body.bio;
 
 	if (username === "" || password === "") {
 		res.render("passport/signup", { message: "Please indicate username and password" });
