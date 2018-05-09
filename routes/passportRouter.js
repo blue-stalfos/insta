@@ -7,6 +7,8 @@ const bcrypt         	= require("bcrypt");
 const bcryptSalt     	= 10;
 const ensureLogin 		= require("connect-ensure-login");
 const passport      	= require("passport");
+const Photo 			= require('../models/photo');
+const uploadCloud 		= require('../config/cloudinary');
 
 
 router.get("/private", ensureLogin.ensureLoggedIn(), (req, res) => {
@@ -42,7 +44,7 @@ router.post("/signup", (req, res, next) => {
 			password: hashPass,
 			fullname: fullname,
 			bio: bio,
-			// avatar: String
+			avatar: "/images/generic.jpeg"
 		});
 
 		newUser.save((err) => {
@@ -73,8 +75,8 @@ router.get("/updateprofile/:id", ensureLogin.ensureLoggedIn(), (req, res) => {
 router.post("/updateprofile/:id", (req, res, next) => {
 	const username = req.body.username;
 	const fullname = req.body.fullname;
-	const bio	   = req.body.bio;
-
+	const bio	  = req.body.bio;
+	
 	User.findByIdAndUpdate(req.params.id, {
 		username: username,
 		fullname: fullname,
@@ -83,6 +85,48 @@ router.post("/updateprofile/:id", (req, res, next) => {
   	.then(res.redirect("/private"))
   	.catch();
 })
+
+router.get("/uploadavatar", ensureLogin.ensureLoggedIn(), (req, res) => {
+	res.render("passport/uploadavatar", {user: req.user});
+})
+
+router.post("/uploadavatar/:id", uploadCloud.single("photo"), (req, res, next) => {
+	const imgPath = req.file.url;
+	const owner = req.params.id;
+	const avatar = true;
+	const newPhoto = new Photo({imgPath, owner, avatar})
+	
+	newPhoto.save()
+	console.log(`Image URL is: ${imgPath}
+		Owner is: ${owner}`);
+	User.findByIdAndUpdate(req.params.id, {
+		avatar: imgPath
+	})
+	.then(res.redirect("/private"))
+	// .then(photo => {
+	// 	res.redirect("/private")
+	// })
+	.catch(error => {
+		console.log(error)
+	})
+});
+
+// router.post('/upload', uploadCloud.single('photo'), (req, res, next) => {
+// 	const imgPath = req.file.url;
+// 	const imgName = req.file.originalname;
+// 	const owner = req.user._id;
+// 	const avatar = false;
+// 	const newPhoto = new Photo({imgPath, imgName, owner, avatar})
+	
+// 	newPhoto.save()
+// 	.then(photo => {
+// 		user.avatar = 
+// 		res.redirect('/')
+// 	})
+// 	.catch(error => {
+// 		console.log(error)
+// 	})
+// });
 
 router.get("/logout", (req, res) => {
 	req.logout();
