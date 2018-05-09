@@ -18,7 +18,7 @@ const s3			= require("s3");
 
 
 mongoose.Promise = Promise;
-mongoose.connect('mongodb://localhost/passport-local', {useMongoClient: true})
+mongoose.connect(process.env.MONGODB_URI, {useMongoClient: true})
 	.then(() => {
 		console.log('Connected to Mongo!')
 	}).catch(err => {
