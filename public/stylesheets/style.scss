@@ -1,22 +1,30 @@
 body {
   padding: 10px 50px 10px 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  // background-color: darkgray;
+  background-color: darkgray;
   // background-image: url("../images/penguin.jpg");
-  background-size: cover;
+  // background-size: cover;
 }
 
-@media only screen and (min-width: 768px) { // desktops and tablets
-  background-size: cover;
+@media only screen and (min-width: 768px) {
+  body {
+    background-image: url("../images/penguin.jpg");
+    background-size: cover;
+  }
 }
 
-@media only screen and (max-width: 767px) { // phones in landscape
-  background-size: cover;
+@media only screen and (max-width: 767px) {
+  body {
+    background-image: url("../images/morning.jpg");
+    background-size: cover;
+  }
 }
 
 @media only screen and (max-width: 767px) and (orientation: portrait) {
-  background-image: url("../images/iceforest.jpg");
-  background-size: auto;
+  body {
+    background-image: url("../images/iceforest.jpg");
+    background-size: cover;
+  }
 }
 
 a {
