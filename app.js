@@ -75,7 +75,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // default value for title local
-app.locals.title = 'An Unnamed CRUD App';
+app.locals.title = 'INSTA';
 
 //--------->passport config
 passport.serializeUser((user, cb) => {

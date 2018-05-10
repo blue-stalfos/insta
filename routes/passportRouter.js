@@ -12,7 +12,12 @@ const uploadCloud 		= require('../config/cloudinary');
 
 
 router.get("/private", ensureLogin.ensureLoggedIn(), (req, res) => {
-	res.render("passport/private", {user: req.user});
+
+	Photo.find({owner:req.user._id})
+	.then((photos) => {
+		res.render("passport/private", {user: req.user, photos:photos});
+
+	})
 });
 
 router.get("/signup", (req, res, next) => {
@@ -108,22 +113,40 @@ router.post("/uploadavatar/:id", uploadCloud.single("photo"), (req, res, next) =
 	})
 });
 
-// router.post('/upload', uploadCloud.single('photo'), (req, res, next) => {
-// 	const imgPath = req.file.url;
-// 	const imgName = req.file.originalname;
-// 	const owner = req.user._id;
-// 	const avatar = false;
-// 	const newPhoto = new Photo({imgPath, imgName, owner, avatar})
+router.get("/uploadphoto/:id", ensureLogin.ensureLoggedIn(), (req, res) => {
+	res.render("passport/uploadphoto", {user: req.user});
+})
+
+router.post('/uploadphoto/:id', uploadCloud.single('photo'), (req, res, next) => {
+	const imgPath = req.file.url;
+	const imgName = req.file.originalname;
+	const owner = req.params.id;
+	const avatar = false;
+	const newPhoto = new Photo({imgPath, imgName, owner, avatar})
 	
-// 	newPhoto.save()
-// 	.then(photo => {
-// 		user.avatar = 
-// 		res.redirect('/')
-// 	})
-// 	.catch(error => {
-// 		console.log(error)
-// 	})
-// });
+	newPhoto.save()
+	.then(photo => {
+		res.redirect('/private')
+	})
+	.catch(error => {
+		console.log(error)
+	})
+});
+
+router.post("/delete/:id", (req, res, next) => {
+	const photoID = req.params.id;
+	
+	Photo.findById(photoID)
+	.then((photo) => {
+		photo.remove()
+		.then((response) => {
+			res.redirect("/private")
+		})
+	})
+	.catch((err) => {
+		console.log(err);
+	});
+})
 
 router.get("/logout", (req, res) => {
 	req.logout();

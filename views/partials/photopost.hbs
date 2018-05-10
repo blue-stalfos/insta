@@ -1,8 +1,15 @@
 <div class="card" style="width: 18rem;">
-	<img class="card-img-top" src=".../100px180/" alt="Card image cap">
+	<img class="card-img-top" src={{this.imgPath}} alt="Card image cap">
 	<div class="card-body">
-		<h5 class="card-title">Card title</h5>
-		<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		<h5 class="card-title">{{this.imgName}}</h5>
+		<p class="card-text">{{this.caption}}</p>
 		<a href="#" class="btn btn-primary">Go somewhere</a>
 	</div>
+	<a href="/delete/{{this._id}}">Delete</a>
 </div>
+
+
+
+<form action="/inventory/borrow/{{theProduct._id}}" method="POST">
+    <button class="btn btn-warning b-color" type="submit">Borrow</button>
+</form>
