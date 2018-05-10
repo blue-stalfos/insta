@@ -1,8 +1,17 @@
 body {
   padding: 10px 50px 10px 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-image: url("../images/penguin.jpg");
   background-size: cover; }
+
+@media only screen and (min-width: 768px) {
+  background-size: cover; }
+
+@media only screen and (max-width: 767px) {
+  background-size: cover; }
+
+@media only screen and (max-width: 767px) and (orientation: portrait) {
+  background-image: url("../images/iceforest.jpg");
+  background-size: auto; }
 
 a {
   color: #193844; }

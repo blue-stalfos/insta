@@ -103,9 +103,6 @@ router.post("/uploadavatar/:id", uploadCloud.single("photo"), (req, res, next) =
 		avatar: imgPath
 	})
 	.then(res.redirect("/private"))
-	// .then(photo => {
-	// 	res.redirect("/private")
-	// })
 	.catch(error => {
 		console.log(error)
 	})
