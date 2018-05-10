@@ -1,14 +1,18 @@
 body {
   padding: 10px 50px 10px 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-  background-color: darkgray;
-  // background-image: url("../images/penguin.jpg");
-  // background-size: cover;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  // background-color: darkgray;
+  background-image: url("../images/penguin.jpg");
+  background-size: cover;
 }
 
 @media only screen and (min-width: 768px) {
   body {
-    background-image: url("../images/penguin.jpg");
+    // background-image: url("../images/penguin.jpg");
     background-size: cover;
   }
 }

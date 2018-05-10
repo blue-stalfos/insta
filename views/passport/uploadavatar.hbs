@@ -1,16 +1,15 @@
 <h2>Update Avatar</h2>
 
 <form action="/uploadavatar/{{user._id}}" method="POST" enctype="multipart/form-data">
-	<input type="file" name="photo">
-	<input type="submit" value="Update Avatar">
+	{{!-- <input type="file" name="photo">
+	<input type="submit" value="Update Avatar"> --}}
+	<div class="input-group mb-3">
+		<div class="custom-file">
+			<input type="file" class="custom-file-input" id="inputGroupFile02" name="photo">
+			<label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+		</div>
+			<div class="input-group-append">
+			<input type="submit" class="input-group-text">
+		</div>
+	</div>
 </form>
-
-<div class="input-group mb-3">
-	<div class="custom-file">
-		<input type="file" class="custom-file-input" id="inputGroupFile02">
-		<label class="custom-file-label" for="inputGroupFile02">Choose file</label>
-	</div>
-		<div class="input-group-append">
-		<span class="input-group-text" id="">Upload</span>
-	</div>
-</div>
