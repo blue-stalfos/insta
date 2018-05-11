@@ -1,9 +1,19 @@
 {{#if user}}
-	<div class="upper-margin">
-		{{> userprofile }}
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-sm-auto">
+				{{> userprofile }}
+			</div>
+			<div class="col flex-row">
+				{{#each photos}}
+					<div class="flex-row">
+						{{> photopost}}<br>
+					</div>
+				{{/each}}
+			</div>
+			{{!-- <div class="col col-lg-2">
+				
+			</div> --}}
+		</div>
 	</div>
-
-	{{#each photos}}
-		{{> photopost}}
-	{{/each}}
 {{/if}}
