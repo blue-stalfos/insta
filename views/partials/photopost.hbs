@@ -5,11 +5,7 @@
 		<p class="card-text">{{this.caption}}</p>
 		<a href="#" class="btn btn-primary">Go somewhere</a>
 	</div>
-	<a href="/delete/{{this._id}}">Delete</a>
+	<form action="/delete/{{this._id}}" method="POST" enctype="multipart/form-data">
+		<button type="submit" class="btn btn-danger">Submit</button>
+	</form>
 </div>
-
-
-
-<form action="/inventory/borrow/{{theProduct._id}}" method="POST">
-    <button class="btn btn-warning b-color" type="submit">Borrow</button>
-</form>
