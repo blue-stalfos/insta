@@ -4,12 +4,14 @@
 			<div class="col-sm-auto">
 				{{> userprofile }}
 			</div>
-			<div class="col flex-row">
-				{{#each photos}}
-					<div class="flex-row">
-						{{> photopost}}<br>
-					</div>
-				{{/each}}
+			<div class="col">
+				<div class="row flex flex-wrap">
+					{{#each photos}}
+						<div class="spacing">
+							{{> photopost}}</br>
+						</div>
+					{{/each}}
+				</div>
 			</div>
 		</div>
 	</div>
