@@ -1,0 +1,100 @@
+2018-05-11T19:15:49.494191+00:00 app[web.1]: [0mGET /images/penguin.jpg [36m304 [0m1.088 ms - -[0m
+2018-05-11T19:18:59.318311+00:00 heroku[router]: at=info method=GET path="/" host=rjbfirstapp.herokuapp.com request_id=2cabc2aa-745f-4c15-86a8-39d428683ee7 fwd="104.219.179.22" dyno=web.1 connect=1ms service=6ms status=200 bytes=3062 protocol=http
+2018-05-11T19:18:59.315501+00:00 app[web.1]: [0mGET / [32m200 [0m4.237 ms - 2725[0m
+2018-05-11T19:18:59.372128+00:00 app[web.1]: [0mGET /stylesheets/style.css [32m200 [0m5.594 ms - 927[0m
+2018-05-11T19:18:59.435850+00:00 app[web.1]: [0mGET /javascripts/script.js [32m200 [0m1.439 ms - 125[0m
+2018-05-11T19:18:59.503936+00:00 app[web.1]: [0mGET /images/penguin.jpg [32m200 [0m2.996 ms - 497844[0m
+2018-05-11T19:18:59.374667+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=rjbfirstapp.herokuapp.com request_id=359857d5-a7ee-4cf5-9d02-f7920e185d1f fwd="104.219.179.22" dyno=web.1 connect=0ms service=7ms status=200 bytes=1214 protocol=http
+2018-05-11T19:18:59.438508+00:00 heroku[router]: at=info method=GET path="/javascripts/script.js" host=rjbfirstapp.herokuapp.com request_id=f91d50bc-a18a-4eb9-950c-4a01ce2b6427 fwd="104.219.179.22" dyno=web.1 connect=4ms service=5ms status=200 bytes=425 protocol=http
+2018-05-11T19:18:59.521935+00:00 heroku[router]: at=info method=GET path="/images/penguin.jpg" host=rjbfirstapp.herokuapp.com request_id=74a6ff17-fd3d-497f-b47e-3ade0414bbf0 fwd="104.219.179.22" dyno=web.1 connect=0ms service=24ms status=200 bytes=498123 protocol=http
+2018-05-11T19:18:59.854264+00:00 heroku[router]: at=info method=GET path="/favicon.ico" host=rjbfirstapp.herokuapp.com request_id=e49ec919-933a-4a5d-ad37-434ccee2d9d0 fwd="104.219.179.22" dyno=web.1 connect=5ms service=8ms status=200 bytes=1380 protocol=http
+2018-05-11T19:18:59.848743+00:00 app[web.1]: [0mGET /favicon.ico [32m200 [0m0.940 ms - 1150[0m
+2018-05-11T19:19:02.031959+00:00 heroku[router]: at=info method=GET path="/login" host=rjbfirstapp.herokuapp.com request_id=87684e3d-3f1e-4e03-b1ae-db4045e0ca1e fwd="104.219.179.22" dyno=web.1 connect=1ms service=5ms status=200 bytes=2952 protocol=http
+2018-05-11T19:19:02.026788+00:00 app[web.1]: [0mGET /login [32m200 [0m2.647 ms - 2749[0m
+2018-05-11T19:19:05.589351+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=rjbfirstapp.herokuapp.com request_id=d72c17da-ae04-4595-8e03-d9520b52c9e3 fwd="104.219.179.22" dyno=web.1 connect=0ms service=3ms status=304 bytes=237 protocol=http
+2018-05-11T19:19:05.628108+00:00 heroku[router]: at=info method=GET path="/javascripts/script.js" host=rjbfirstapp.herokuapp.com request_id=68be129b-af00-471e-900d-2c4525e955d4 fwd="104.219.179.22" dyno=web.1 connect=0ms service=11ms status=304 bytes=236 protocol=http
+2018-05-11T19:19:05.630476+00:00 heroku[router]: at=info method=GET path="/images/penguin.jpg" host=rjbfirstapp.herokuapp.com request_id=30d83fcf-68ed-4471-8a9a-8f1744e1dead fwd="104.219.179.22" dyno=web.1 connect=0ms service=9ms status=304 bytes=239 protocol=http
+2018-05-11T19:19:05.584465+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m1.540 ms - -[0m
+2018-05-11T19:19:05.625712+00:00 app[web.1]: [0mGET /javascripts/script.js [36m304 [0m2.512 ms - -[0m
+2018-05-11T19:19:05.626029+00:00 app[web.1]: [0mGET /images/penguin.jpg [36m304 [0m1.932 ms - -[0m
+2018-05-11T19:19:10.108854+00:00 heroku[router]: at=info method=POST path="/login" host=rjbfirstapp.herokuapp.com request_id=1b31f568-846a-4e84-a5b5-e7ad780f958a fwd="104.219.179.22" dyno=web.1 connect=0ms service=109ms status=302 bytes=255 protocol=http
+2018-05-11T19:19:10.103583+00:00 app[web.1]: [0mPOST /login [36m302 [0m106.476 ms - 60[0m
+2018-05-11T19:19:10.150304+00:00 app[web.1]: [0mGET /private [32m200 [0m14.185 ms - 6554[0m
+2018-05-11T19:19:10.220446+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m10.542 ms - -[0m
+2018-05-11T19:19:10.298734+00:00 app[web.1]: [0mGET /javascripts/script.js [36m304 [0m1.071 ms - -[0m
+2018-05-11T19:19:10.307213+00:00 app[web.1]: [0mGET /images/penguin.jpg [36m304 [0m1.047 ms - -[0m
+2018-05-11T19:19:10.155191+00:00 heroku[router]: at=info method=GET path="/private" host=rjbfirstapp.herokuapp.com request_id=623cf11d-b0c3-481f-a46e-5b81adce24cc fwd="104.219.179.22" dyno=web.1 connect=0ms service=17ms status=200 bytes=6758 protocol=http
+2018-05-11T19:19:10.311897+00:00 heroku[router]: at=info method=GET path="/images/penguin.jpg" host=rjbfirstapp.herokuapp.com request_id=1c9a3e76-29ad-4182-9a69-c916d9ba7b26 fwd="104.219.179.22" dyno=web.1 connect=0ms service=7ms status=304 bytes=239 protocol=http
+2018-05-11T19:19:10.225127+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=rjbfirstapp.herokuapp.com request_id=50a64303-c1f6-4cf5-b2c0-58a8d0ee4bd9 fwd="104.219.179.22" dyno=web.1 connect=0ms service=12ms status=304 bytes=237 protocol=http
+2018-05-11T19:19:10.301415+00:00 heroku[router]: at=info method=GET path="/javascripts/script.js" host=rjbfirstapp.herokuapp.com request_id=29696e4e-111b-485c-83bb-9ffdec8cc8cf fwd="104.219.179.22" dyno=web.1 connect=0ms service=3ms status=304 bytes=236 protocol=http
+2018-05-11T19:52:23.962206+00:00 heroku[web.1]: Idling
+2018-05-11T19:52:23.962206+00:00 heroku[web.1]: State changed from up to down
+2018-05-11T19:52:24.954987+00:00 heroku[web.1]: Stopping all processes with SIGTERM
+2018-05-11T19:52:25.123747+00:00 heroku[web.1]: Process exited with status 143
+2018-05-11T19:59:37.071561+00:00 heroku[web.1]: Unidling
+2018-05-11T19:59:37.071856+00:00 heroku[web.1]: State changed from down to starting
+2018-05-11T19:59:37.015359+00:00 heroku[web.1]: Unidling
+2018-05-11T19:59:37.015359+00:00 heroku[web.1]: State changed from down to starting
+2018-05-11T19:59:37.087476+00:00 heroku[web.1]: Unidling
+2018-05-11T19:59:37.080317+00:00 heroku[web.1]: Unidling
+2018-05-11T19:59:37.080726+00:00 heroku[web.1]: State changed from down to starting
+2018-05-11T19:59:37.090006+00:00 heroku[web.1]: State changed from down to starting
+2018-05-11T19:59:42.217812+00:00 heroku[web.1]: Starting process with command `npm start`
+2018-05-11T19:59:45.338872+00:00 app[web.1]: 
+2018-05-11T19:59:45.338894+00:00 app[web.1]: > starter-code@0.0.0 start /app
+2018-05-11T19:59:45.338896+00:00 app[web.1]: > node ./bin/www
+2018-05-11T19:59:45.338898+00:00 app[web.1]: 
+2018-05-11T19:59:47.411059+00:00 app[web.1]: Warning: connect.session() MemoryStore is not
+2018-05-11T19:59:47.411098+00:00 app[web.1]: designed for a production environment, as it will leak
+2018-05-11T19:59:47.411101+00:00 app[web.1]: memory, and will not scale past a single process.
+2018-05-11T19:59:47.921857+00:00 app[web.1]: Listening on http://localhost:18934
+2018-05-11T19:59:47.986221+00:00 app[web.1]: Connected to Mongo!
+2018-05-11T19:59:48.544506+00:00 heroku[web.1]: State changed from starting to up
+2018-05-11T19:59:49.222292+00:00 heroku[router]: at=info method=GET path="/javascripts/script.js" host=rjbfirstapp.herokuapp.com request_id=2cef4b28-ccf9-4396-a86b-f8a14ddff53e fwd="104.219.179.22" dyno=web.1 connect=0ms service=36ms status=200 bytes=553 protocol=https
+2018-05-11T19:59:49.222180+00:00 app[web.1]: [0mGET /javascripts/script.js [32m200 [0m17.592 ms - 125[0m
+2018-05-11T19:59:51.214489+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=rjbfirstapp.herokuapp.com request_id=e3c87999-b8a4-48d6-9441-fdbc23a26ba8 fwd="104.219.179.22" dyno=web.1 connect=0ms service=30ms status=200 bytes=1243 protocol=https
+2018-05-11T19:59:51.189871+00:00 heroku[router]: at=info method=GET path="/" host=rjbfirstapp.herokuapp.com request_id=a83e4e9e-fa1d-4197-aaa9-fb637324d209 fwd="104.219.179.22" dyno=web.1 connect=0ms service=66ms status=304 bytes=281 protocol=https
+2018-05-11T19:59:51.188854+00:00 app[web.1]: [0mGET / [36m304 [0m61.509 ms - -[0m
+2018-05-11T19:59:51.212074+00:00 app[web.1]: [0mGET /stylesheets/style.css [32m200 [0m17.186 ms - -[0m
+2018-05-11T19:59:51.241888+00:00 app[web.1]: [0mGET /images/iceforest.jpg [32m200 [0m13.099 ms - 3762778[0m
+2018-05-11T19:59:51.273780+00:00 heroku[router]: at=info method=GET path="/images/iceforest.jpg" host=rjbfirstapp.herokuapp.com request_id=4078603b-e03d-48d1-85a7-8c54f0e53f82 fwd="104.219.179.22" dyno=web.1 connect=1ms service=120ms status=200 bytes=3763191 protocol=https
+2018-05-11T19:59:51.919445+00:00 heroku[router]: at=info method=GET path="/images/morning.jpg" host=rjbfirstapp.herokuapp.com request_id=497a01a1-9fe8-4888-8ea1-8d8cd3b84cce fwd="104.219.179.22" dyno=web.1 connect=1ms service=106ms status=200 bytes=5034573 protocol=https
+2018-05-11T19:59:51.899474+00:00 app[web.1]: [0mGET /images/morning.jpg [32m200 [0m4.819 ms - 5034292[0m
+2018-05-11T19:59:57.246916+00:00 heroku[router]: at=info method=GET path="/javascripts/script.js" host=rjbfirstapp.herokuapp.com request_id=946f9baa-3e29-4d9e-8794-5f756dd8f881 fwd="104.219.179.22" dyno=web.1 connect=1ms service=6ms status=304 bytes=236 protocol=https
+2018-05-11T19:59:57.247386+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=rjbfirstapp.herokuapp.com request_id=1fdb514c-dbbc-4839-a6cc-c9b70b28b3a4 fwd="104.219.179.22" dyno=web.1 connect=0ms service=10ms status=200 bytes=1214 protocol=https
+2018-05-11T19:59:57.165201+00:00 app[web.1]: [0mGET /login [32m200 [0m7.645 ms - 2749[0m
+2018-05-11T19:59:57.242802+00:00 app[web.1]: [0mGET /javascripts/script.js [36m304 [0m2.482 ms - -[0m
+2018-05-11T19:59:57.245650+00:00 app[web.1]: [0mGET /stylesheets/style.css [32m200 [0m4.967 ms - 927[0m
+2018-05-11T19:59:57.293368+00:00 app[web.1]: [0mGET /images/morning.jpg [36m304 [0m1.006 ms - -[0m
+2018-05-11T19:59:57.167121+00:00 heroku[router]: at=info method=GET path="/login" host=rjbfirstapp.herokuapp.com request_id=60c8d880-dcc5-48d6-8cc5-cfba1568cf32 fwd="104.219.179.22" dyno=web.1 connect=0ms service=9ms status=200 bytes=2952 protocol=https
+2018-05-11T19:59:57.295186+00:00 heroku[router]: at=info method=GET path="/images/morning.jpg" host=rjbfirstapp.herokuapp.com request_id=0a55f2b7-aa40-4e24-a7be-e4740a8dcb81 fwd="104.219.179.22" dyno=web.1 connect=1ms service=2ms status=304 bytes=240 protocol=https
+2018-05-11T20:00:07.189690+00:00 heroku[router]: at=info method=POST path="/login" host=rjbfirstapp.herokuapp.com request_id=6b0e6c43-ea96-418f-9432-8831a223d7c2 fwd="104.219.179.22" dyno=web.1 connect=0ms service=247ms status=302 bytes=255 protocol=https
+2018-05-11T20:00:07.187838+00:00 app[web.1]: [0mPOST /login [36m302 [0m240.769 ms - 60[0m
+2018-05-11T20:00:07.334162+00:00 app[web.1]: [0mGET /private [32m200 [0m63.919 ms - 6554[0m
+2018-05-11T20:00:07.336526+00:00 heroku[router]: at=info method=GET path="/private" host=rjbfirstapp.herokuapp.com request_id=31f629c9-0e1b-4554-a7c8-cb7c82e17209 fwd="104.219.179.22" dyno=web.1 connect=0ms service=67ms status=200 bytes=6758 protocol=https
+2018-05-11T20:00:07.490102+00:00 heroku[router]: at=info method=GET path="/javascripts/script.js" host=rjbfirstapp.herokuapp.com request_id=c0ee5a67-d028-4b30-8090-f1797af02bce fwd="104.219.179.22" dyno=web.1 connect=1ms service=17ms status=304 bytes=236 protocol=https
+2018-05-11T20:00:07.489997+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=rjbfirstapp.herokuapp.com request_id=7d95440d-9d61-4011-a453-b21ac8807352 fwd="104.219.179.22" dyno=web.1 connect=0ms service=19ms status=304 bytes=237 protocol=https
+2018-05-11T20:00:07.486198+00:00 app[web.1]: [0mGET /javascripts/script.js [36m304 [0m10.424 ms - -[0m
+2018-05-11T20:00:07.488042+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m13.919 ms - -[0m
+2018-05-11T20:00:07.602670+00:00 app[web.1]: [0mGET /images/morning.jpg [36m304 [0m1.545 ms - -[0m
+2018-05-11T20:00:07.604208+00:00 heroku[router]: at=info method=GET path="/images/morning.jpg" host=rjbfirstapp.herokuapp.com request_id=1ec9a540-9222-4cd3-b2b3-65a42d7f5cbf fwd="104.219.179.22" dyno=web.1 connect=0ms service=3ms status=304 bytes=240 protocol=https
+2018-05-11T20:00:10.862215+00:00 heroku[router]: at=info method=GET path="/images/penguin.jpg" host=rjbfirstapp.herokuapp.com request_id=1021204d-ce59-4da3-892d-450c6d4119fe fwd="104.219.179.22" dyno=web.1 connect=0ms service=68ms status=200 bytes=498123 protocol=https
+2018-05-11T20:00:10.856057+00:00 app[web.1]: [0mGET /images/iceforest.jpg [36m304 [0m5.698 ms - -[0m
+2018-05-11T20:00:10.861392+00:00 app[web.1]: [0mGET /images/penguin.jpg [32m200 [0m1.309 ms - 497844[0m
+2018-05-11T20:00:10.860238+00:00 heroku[router]: at=info method=GET path="/images/iceforest.jpg" host=rjbfirstapp.herokuapp.com request_id=c68b4872-480d-4ad0-b549-25b1d3ac37d0 fwd="104.219.179.22" dyno=web.1 connect=1ms service=29ms status=304 bytes=240 protocol=https
+2018-05-11T20:23:01.111393+00:00 heroku[router]: at=info method=GET path="/private" host=rjbfirstapp.herokuapp.com request_id=5d2d36ab-ea8d-4e39-9ed6-ad04944b7b15 fwd="104.219.179.22" dyno=web.1 connect=0ms service=23ms status=200 bytes=6758 protocol=https
+2018-05-11T20:23:01.105220+00:00 app[web.1]: [0mGET /private [32m200 [0m19.285 ms - 6554[0m
+2018-05-11T20:23:01.258909+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m16.551 ms - -[0m
+2018-05-11T20:23:01.314453+00:00 app[web.1]: [0mGET /javascripts/script.js [32m200 [0m7.449 ms - 125[0m
+2018-05-11T20:23:01.318146+00:00 heroku[router]: at=info method=GET path="/javascripts/script.js" host=rjbfirstapp.herokuapp.com request_id=4a30a0a4-698c-4e2f-997b-34e335f185e6 fwd="104.219.179.22" dyno=web.1 connect=0ms service=14ms status=200 bytes=425 protocol=https
+2018-05-11T20:23:01.264474+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=rjbfirstapp.herokuapp.com request_id=880e541e-47bc-4f26-9354-4295b387062c fwd="104.219.179.22" dyno=web.1 connect=0ms service=22ms status=304 bytes=237 protocol=https
+2018-05-11T20:23:01.440113+00:00 heroku[router]: at=info method=GET path="/images/iceforest.jpg" host=rjbfirstapp.herokuapp.com request_id=f94f014c-f39c-4d6f-8c30-7e612e2478cb fwd="104.219.179.22" dyno=web.1 connect=0ms service=80ms status=200 bytes=3763059 protocol=https
+2018-05-11T20:23:01.411448+00:00 app[web.1]: [0mGET /images/iceforest.jpg [32m200 [0m4.195 ms - 3762778[0m
+2018-05-11T20:23:04.044309+00:00 heroku[router]: at=info method=GET path="/uploadavatar" host=rjbfirstapp.herokuapp.com request_id=ac1364b4-c44d-4a72-8dc2-49831504ca81 fwd="104.219.179.22" dyno=web.1 connect=1ms service=23ms status=200 bytes=2989 protocol=https
+2018-05-11T20:23:04.144134+00:00 heroku[router]: at=info method=GET path="/javascripts/script.js" host=rjbfirstapp.herokuapp.com request_id=fdbbc55c-ffbb-4eea-836b-4470403f6222 fwd="104.219.179.22" dyno=web.1 connect=4ms service=4ms status=304 bytes=236 protocol=https
+2018-05-11T20:23:04.037233+00:00 app[web.1]: [0mGET /uploadavatar [32m200 [0m16.582 ms - 2786[0m
+2018-05-11T20:23:04.140242+00:00 app[web.1]: [0mGET /javascripts/script.js [36m304 [0m1.690 ms - -[0m
+2018-05-11T20:23:04.141243+00:00 app[web.1]: [0mGET /stylesheets/style.css [36m304 [0m2.232 ms - -[0m
+2018-05-11T20:23:04.192915+00:00 app[web.1]: [0mGET /images/iceforest.jpg [36m304 [0m3.324 ms - -[0m
+2018-05-11T20:23:04.146943+00:00 heroku[router]: at=info method=GET path="/stylesheets/style.css" host=rjbfirstapp.herokuapp.com request_id=2b1ad20b-fe04-4159-a4e5-c13aa093c130 fwd="104.219.179.22" dyno=web.1 connect=5ms service=5ms status=304 bytes=237 protocol=https
+2018-05-11T20:23:04.198982+00:00 heroku[router]: at=info method=GET path="/images/iceforest.jpg" host=rjbfirstapp.herokuapp.com request_id=3191e96f-7056-453d-ae73-1c7731a830f1 fwd="104.219.179.22" dyno=web.1 connect=0ms service=5ms status=304 bytes=240 protocol=https
