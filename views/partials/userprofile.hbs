@@ -6,9 +6,9 @@
 		<p class="card-text">{{user.bio}}</p>
 	</div>
 	<ul class="list-group list-group-flush">
-		<li class="list-group-item"><em>This many photos</em></li>
-		<li class="list-group-item"><em>This many followers</em></li>
-		<li class="list-group-item"><em>Following this many</em></li>
+		<li class="list-group-item"><em>{{numberOfPhotos}} Photo(s)</em></li>
+		<!-- <li class="list-group-item"><em>This many followers</em></li>
+		<li class="list-group-item"><em>Following this many</em></li> -->
 	</ul>
 	<div class="card-body">
 		<a href="/uploadphoto/{{user._id}}"><button type="button" class="btn btn-primary">Post</button></a>

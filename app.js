@@ -65,7 +65,7 @@ app.use(require('node-sass-middleware')({
 	dest: path.join(__dirname, 'public'),
 	sourceMap: true
 }));
-			
+
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
@@ -88,9 +88,9 @@ passport.deserializeUser((id, cb) => {
 	  cb(null, user);
 	});
 });
-  
+
 app.use(flash());
-  
+
 passport.use(new LocalStrategy({
 	passReqToCallback: true
 }, (req, username, password, next) => {
@@ -104,7 +104,7 @@ passport.use(new LocalStrategy({
 	  	if (!bcrypt.compareSync(password, user.password)) {
 			return next(null, false, { message: "Incorrect password" });
 	  	}
-  
+
 	  	return next(null, user);
 	});
 }));
@@ -113,6 +113,5 @@ const index = require('./routes/index');
 const passportRouter = require("./routes/passportRouter");
 app.use('/', index);
 app.use('/', passportRouter);
-
 
 module.exports = app;
