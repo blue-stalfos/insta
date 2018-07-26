@@ -43,7 +43,7 @@ router.post("/signup", (req, res, next) => {
 		const salt = bcrypt.genSaltSync(bcryptSalt);
 		const hashPass = bcrypt.hashSync(password, salt);
 
-		const newUser = new User( {
+		const newUser = new User({
 			username: username,
 			password: hashPass,
 			fullname: fullname,
@@ -101,8 +101,7 @@ router.post("/uploadavatar/:id", uploadCloud.single("photo"), (req, res, next) =
 	const newPhoto = new Photo({imgPath, owner, avatar})
 
 	newPhoto.save()
-	console.log(`Image URL is: ${imgPath}
-		Owner is: ${owner}`);
+
 	User.findByIdAndUpdate(req.params.id, {
 		avatar: imgPath
 	})
