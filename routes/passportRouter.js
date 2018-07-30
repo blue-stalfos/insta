@@ -139,8 +139,8 @@ router.post("/delete/:id", (req, res, next) => {
 			res.redirect("/private")
 		})
 	})
-	.catch((err) => {
-		console.log(err);
+	.catch((error) => {
+		console.log(error);
 	});
 })
 
